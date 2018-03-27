@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_select"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_384"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_286"
+            android:background="@drawable/bg_btn_v_f_dialog_above_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_380"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_validation_fails" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_29"
+                    android:text="@string/validation_fails_popwindow_text"
+                    android:textColor="@color/validation_fails_popwindow_text_color"
+                    android:textSize="@dimen/sp_20" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_83"
+            android:background="@drawable/bg_btn_bottom_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/no_invite_code"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_rounded_corners_border_selector"
+                android:gravity="center"
+                android:text="@string/i_dont_have_invite_code"
+                android:textColor="@color/button_text_color_selector"
+                android:textSize="@dimen/sp_17" />
+
+            <TextView
+                android:id="@+id/return_string"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_rounded_corners_selector"
+                android:gravity="center"
+                android:text="@string/return_string"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/round_rectangle_gray_bg"
+    android:paddingTop="@dimen/dp_30">
+
+    <RelativeLayout
+        android:id="@+id/rl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_30">
+
+        <com.dariopellegrini.formbuilder.FineTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_30" />
+
+        <ImageView
+            android:id="@+id/visitor_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/visitor_types_selector" />
+    </RelativeLayout>
+
+    <!--<View-->
+        <!--android:id="@+id/line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@+id/rl_dialog"-->
+        <!--android:background="@color/line" />-->
+
+</RelativeLayout>

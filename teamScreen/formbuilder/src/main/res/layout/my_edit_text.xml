@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dariopellegrini.formbuilder.FineEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="9dp"
+    android:paddingTop="12dp"
+    android:textColor="@color/text_color"
+    android:textColorHint="@color/hint_color"
+    android:textCursorDrawable="@drawable/color_cursor"
+    android:theme="@style/MyEditText" />

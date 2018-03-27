@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_login_out"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_48">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_hint"
+            android:textColor="@color/line_gray_text"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exit"
+            android:textColor="@color/line_blue_text"
+            android:textSize="@dimen/sp_24" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/dp_348"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/bg_btn_search"
+        android:gravity="left|center"
+        android:hint="@string/enter_password"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="@dimen/dp_18"
+        android:paddingLeft="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColorHint="@color/line_gray_edit_text"
+        android:textSize="@dimen/sp_18" />
+
+
+    <com.dariopellegrini.formbuilder.FineTextView
+        android:id="@+id/negativeButton"
+        android:layout_width="@dimen/dp_272"
+        android:layout_height="@dimen/dp_70"
+        android:layout_below="@+id/error_message"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_46"
+        android:background="@drawable/bg_btn_selector"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28" />
+
+</LinearLayout>

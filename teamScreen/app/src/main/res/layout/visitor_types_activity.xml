@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/menu_title_layout" />
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/next_step_button"
+        android:layout_below="@+id/relative"
+        android:layout_marginTop="@dimen/dp_117"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:listSelector="@android:color/transparent">
+
+    </ListView>
+
+    <com.dariopellegrini.formbuilder.FineTextView
+        android:id="@+id/next_step_button"
+        android:layout_width="@dimen/dp_272"
+        android:layout_height="@dimen/dp_70"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_105"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:background="@drawable/bg_btn_selector"
+        android:gravity="center"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28" />
+
+</RelativeLayout>

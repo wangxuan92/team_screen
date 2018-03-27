@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">团队显示屏</string>
+
+    <string name="binding_successful">配对成功</string>
+    <string name="binding_successful_hint">现在可以在企业管理后台设置迎接你的第一个访客了</string>
+    <string name="open_visitors_system">开启智能访客系统</string>
+    <string name="again_match">重新配对</string>
+    <string name="sign_back">访客签退</string>
+    <string name="sign_in">访客签到</string>
+    <string name="invite_code_prompt">请输入短信邀请码</string>
+    <string name="invite_code_prompt_2">请输入您的邀请码，邀请码通常是您手机号码的后4位数字</string>
+    <string name="confirm">确认</string>
+    <string name="empty">清空</string>
+    <string name="dont_have_invite_code">我没有邀请码</string>
+    <string name="camera_permission_confirmation">相机权限确认</string>
+    <string name="camera_permission_not_granted">没有开启相机权限</string>
+    <string name="taking_pictures">拍摄照片</string>
+    <string name="confirm_pictures">确认照片</string>
+    <string name="taking_pictures_2">您的信息只做记录使用，我们不会透露，请放心拍摄</string>
+    <string name="validation_fails_popwindow_text">您输入的邀请码不正确</string>
+    <string name="i_dont_have_invite_code">我没有邀请码</string>
+    <string name="return_string">返回</string>
+    <string name="temporary_visitor">您是临时访客</string>
+    <string name="temporary_visitor_1">请先填写下面信息</string>
+    <string name="neme_hint">姓名</string>
+    <string name="phone_hint">电话</string>
+    <string name="mobile_phone">手机号</string>
+    <string name="visiting_time">到访时间</string>
+    <string name="company">公司</string>
+    <string name="company_name">公司名</string>
+    <string name="location_name">分部名</string>
+    <string name="company_hint">所在公司</string>
+    <string name="visiting_reason_hint">来访事由</string>
+    <string name="next_step">下一步</string>
+    <string name="confirmation_text">已确认到访</string>
+    <string name="confirmation_text1">请你稍微等待，我们已经通知相关人员前来接引</string>
+    <string name="mandatory">请输入</string>
+    <string name="mandatory_visits_code">请输入邀请码</string>
+    <string name="return_prompt">%1$ss</string>
+    <string name="return_prompt_1">自动返回首页</string>
+    <string name="cancel">取消</string>
+    <string name="information_recorded_failure">信息录入失败，请重新录入</string>
+    <string name="image_information_recorded_failure">图像信息录入失败，请重新拍照</string>
+    <string name="visit">参观</string>
+    <string name="participation">参加活动</string>
+    <string name="visitors_choose_type">选择访客类型</string>
+    <string name="visitors_choose_type1">请选择访客类型</string>
+    <string name="printing">打印</string>
+    <string name="printing_failed">打印失败,请重新打印</string>
+    <string name="printing_failed1">打印失败,没有找到打印文件,请重新打印</string>
+
+    <string name="unknown_error">未知错误信息</string>
+    <string name="service_error">服务器发生错误，请稍后再试</string>
+    <string name="network_not_connect">网络尚未连接</string>
+    <string name="data_parsing_errors">数据解析错误</string>
+    <string name="binding_hint">请将上面6位数字输入到企业管理后台的平板配对输入框中</string>
+    <string name="again_generate_code">重新生成配对码</string>
+    <string name="again_generate_code_hint">%1$ss后重新生成配对码</string>
+
+
+    <string name="fd_failed_to_initialize">FD初始化失败，错误码：</string>
+    <string name="fr_failed_to_initialize">FR初始化失败，错误码：</string>
+    <string name="cannot_be_detected">人脸特征无法检测，请重新拍照</string>
+    <string name="not_detected">没有检测到人脸，请重新拍照</string>
+    <string name="automatic_printing">已成功打印卡片</string>
+    <string name="failure_printing">打印失败</string>
+    <string name="ongoing_printing">正在打印</string>
+    <string name="again_printing">重新打印</string>
+    <string name="printing_error_connect_failed">打印机未能连接</string>
+    <string name="printing_error_paper_empty">没有打印纸了，请放入打印纸重新打印</string>
+    <string name="printing_error_overheating">打印机过热，请稍后重新打印</string>
+    <string name="printing_error_paper_jam">打印纸卡住，请检查打印机</string>
+    <string name="printing_error_feed_or_cassette_empt">墨盒或纸匣空的，请检查打印机</string>
+    <string name="printing_error_ststem_error">系统错误</string>
+    <string name="printing_error_no_cassette">没有纸匣</string>
+    <string name="printing_error_wrong_cassette_direct">纸匣加载错误</string>
+    <string name="printing_error_out_of_memory">内存不足</string>
+
+    <string name="have_informed_visiting">已通知到访</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="password_mistake">密码错误</string>
+    <string name="exit">退出</string>
+    <string name="exit_hint">输入密码进行</string>
+    <string name="reason">访问事由：</string>
+
+
+</resources>

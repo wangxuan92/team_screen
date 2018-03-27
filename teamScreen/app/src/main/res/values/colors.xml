@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0066FF</color>
+    <color name="colorPrimaryDark">#0066FF</color>
+    <color name="text_color_black_228">#E4E4E4</color>
+
+    <!--全透明-->
+    <color name="transparency">#00000000</color>
+    <color name="error_message_color">#EF434A</color>
+    <color name="text_color_blue_66">#666666</color>
+    <color name="text_color_blue_40">#001F40</color>
+    <color name="text_color_blue_7f">#51667F</color>
+    <color name="text_color_blue_31">#011631</color>
+    <color name="text_color_blue_d4">#D4D4D4</color>
+    <color name="text_color_blue_dc">#DCDCDC</color>
+    <color name="hint_color">#A9B3BE</color>
+    <color name="colorAccent">#28C97C</color>
+
+
+    <color name="text_color_blue_18">#5d00b475</color>
+    <color name="text_color_blue_9c">#84909C</color>
+    <color name="validation_fails_popwindow_blue">#FFF9F7</color>
+    <color name="validation_fails_popwindow_text_color">#001F40</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="line_gray">#f1f1f1</color>
+    <color name="line_gray_ca">#CAD2DE</color>
+    <color name="line_key_board">#A7B5AE</color>
+    <color name="line_gray_edit_text">#8EA4BF</color>
+    <color name="line_blue_text">#0097FB</color>
+    <color name="line_gray_text">#535353</color>
+    <color name="white_pressed">#d1d1d1</color>
+    <color name="text_color_blue_de">#DEDEDE</color>
+    <color name="but_background_grey">#A0B4D2</color>
+    <color name="but_background_enabled">#D8DFEB</color>
+</resources>

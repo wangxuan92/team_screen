@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="but_background_green">#28C97C</color>
+    <color name="but_background_green_pressed">#00B475</color>
+    <color name="but_background_green_pressed_2">#5d28c97c</color>
+    <color name="text_color_green">#28C97C</color>
+</resources>

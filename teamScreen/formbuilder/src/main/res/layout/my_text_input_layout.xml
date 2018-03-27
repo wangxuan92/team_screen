@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="9dp"
+    android:paddingTop="12dp">
+
+    <ImageView
+        android:id="@+id/mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_24"
+        android:src="@drawable/img_icon_biaozhu"
+        android:visibility="invisible" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/mandatory"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:textCursorDrawable="@drawable/color_cursor" />
+</RelativeLayout>
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_13">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_60"
+        android:layout_marginRight="@dimen/dp_44"
+        android:layout_marginTop="@dimen/dp_52">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_blue_40"
+            android:textSize="@dimen/sp_52"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="10s"
+            android:visibility="gone"
+            android:textColor="@color/text_color_blue_40"
+            android:textSize="@dimen/sp_52" />
+
+
+    </RelativeLayout>
+
+    <com.dariopellegrini.formbuilder.FineTextView
+        android:id="@+id/headings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taking_pictures"
+        android:layout_marginLeft="@dimen/dp_60"
+        android:textColor="@color/text_color_blue_7f"
+        android:textSize="@dimen/sp_20" />
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'io.leao.codecolors.plugin'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "io.kuban.teamscreen"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        sourceSets.main {
+            jniLibs.srcDirs = ['libs']
+        }
+        buildConfigField "boolean", "LOG_DEBUG", "false"
+        buildConfigField "String", "BASE_URL", "\"https://ent-devapi.kuban.io/api/v1/\""
+        buildConfigField "String", "ASSET_BASE_URL", "\"https://media-ssl.kuban.io/\""
+        buildConfigField "String", "DOOR_LOCK_KEY", "\"82fc1839159ae08f78af9b36422a8068\""
+        buildConfigField "String", "DOOR_LOCK_IV", "\"75fc3d3b2f4fe835\""
+    }
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "String", "BASE_URL", "\"https://ent-devapi.kuban.io/api/v1/\""
+            buildConfigField "String", "ASSET_BASE_URL", "\"https://media-dev-ssl.kuban.io/\""
+            buildConfigField "String", "DOOR_LOCK_KEY", "\"08981fe1177f170e68667c1d3527848f\""
+            buildConfigField "String", "DOOR_LOCK_IV", "\"9314059931eedf0e\""
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+        }
+    }
+
+//    //签名文件
+//    signingConfigs {
+//        release {
+//            keyAlias 'kuban'
+//            keyPassword 'kuban123456'
+//            storeFile file('../kuban.jks')
+//            storePassword 'kuban123456'
+//        }
+//        debug {
+//            keyAlias 'kuban'
+//            keyPassword 'kuban123456'
+//            storeFile file('../kuban.jks')
+//            storePassword 'kuban123456'
+//        }
+//    }
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'io.kuban.teamscreen.db'
+    targetGenDir 'src/main/java'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.3'
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'com.guo.android_extend:android-extend:1.0.1'
+    compile 'com.airbnb.android:lottie:2.2.0'
+    compile 'com.yanzhenjie:permission:1.0.4'
+    compile 'io.leao:codecolors-appcompat:0.3.0'
+    compile 'com.elvishew:xlog:1.4.0'
+    compile project(':androidanimations')
+    compile project(':cameraview')
+    compile project(':formbuilder')
+
+}
+
+codecolors {
+    resFileName "codecolors" // The default name is 'codecolors'.
+}

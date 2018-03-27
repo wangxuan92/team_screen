@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_13">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/image_return"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/dp_31">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_44"
+                android:src="@drawable/icon_circle_back_black_selector" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_home"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_31">
+
+            <ImageView
+                android:layout_width="@dimen/dp_31"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_44"
+                android:src="@drawable/img_icon_shouye_selector" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/title_layout" />
+
+</LinearLayout>
