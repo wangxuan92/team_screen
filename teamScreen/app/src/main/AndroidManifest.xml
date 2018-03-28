@@ -47,18 +47,6 @@
             android:name=".MainActivity"
             android:screenOrientation="landscape"
             android:theme="@style/translucent" />
-        <activity
-            android:name=".activity.ValidationActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/translucent" />
-        <activity
-            android:name=".activity.InformationInputActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/translucent1" />
-        <activity
-            android:name=".activity.VisitorTypesActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/translucent" />
 
         <receiver android:name=".receiver.NetBroadcastReceiver">
             <intent-filter>

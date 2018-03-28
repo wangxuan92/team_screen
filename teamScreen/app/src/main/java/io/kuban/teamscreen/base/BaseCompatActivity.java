@@ -82,6 +82,8 @@ public class BaseCompatActivity extends FragmentActivity implements NetBroadcast
         WindowManager.LayoutParams params = window.getAttributes();
         params.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE;
         window.setAttributes(params);
+        //防止锁屏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 //添加Activity到堆栈
         AtyContainer.getInstance().addActivity(this);
         activity = this;

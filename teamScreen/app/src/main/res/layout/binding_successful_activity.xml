@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
-    android:paddingTop="@dimen/dp_80">
+    android:orientation="vertical">
 
     <include layout="@layout/title_layout" />
 
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/relative"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_102"
+        android:layout_marginTop="@dimen/dp_30"
         android:background="@drawable/img_pic_back"
         android:orientation="vertical"
         android:paddingLeft="@dimen/dp_23"
@@ -120,7 +119,7 @@
         android:layout_below="@+id/line1"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="@dimen/dp_12"
-        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_40"
         android:background="@drawable/bg_btn_selector"
         android:gravity="center"
         android:text="@string/open_visitors_system"
@@ -137,7 +136,7 @@
         android:background="@drawable/bg_btn_border_selector"
         android:gravity="center"
         android:orientation="horizontal"
-        android:visibility="gone">
+       >
 
         <com.dariopellegrini.formbuilder.FineTextView
             android:layout_width="wrap_content"

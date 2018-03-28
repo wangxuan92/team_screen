@@ -3,10 +3,8 @@ package io.kuban.teamscreen.activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-
-import com.dariopellegrini.formbuilder.FineTextView;
+import android.widget.Button;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -41,7 +39,7 @@ public class BindingActivity extends BaseCompatActivity {
     @BindView(R.id.validate_code)
     LetterSpacingTextView mValidateCode;
     @BindView(R.id.refresh)
-    FineTextView refresh;
+    Button refresh;
 
     private int validateCode;
     private CountDownTimer timer;
@@ -61,7 +59,7 @@ public class BindingActivity extends BaseCompatActivity {
             cache.put(ActivityManager.APP_PASSWORD, CustomerApplication.appPassword);
         }
 
-        if (null != padsModel) {
+        if (null != padsModel && null != padsModel.meeting_screen) {
             CustomerApplication.spaceId = String.valueOf(padsModel.space_id);
             CustomerApplication.locationId = String.valueOf(padsModel.location_id);
             ActivityManager.startMainActivity(BindingActivity.this);
@@ -83,9 +81,10 @@ public class BindingActivity extends BaseCompatActivity {
     }
 
     public void generateCode() {
-//        refresh.setEnabled(false);
+        refresh.setEnabled(false);
         validateCode = (int) ((Math.random() * 9 + 1) * 100000);
         mValidateCode.setText(String.valueOf(validateCode));
+        cache.remove(ActivityManager.TO_KEN);
         postRegister();
         long millisInFuture = 120000;
         if (null == timer) {
@@ -110,7 +109,7 @@ public class BindingActivity extends BaseCompatActivity {
 
     protected void initButton() {
         timer.cancel();
-//        refresh.setEnabled(true);
+        refresh.setEnabled(true);
         refresh.setText(CustomerApplication.getStringResources(R.string.again_generate_code));
     }
 
@@ -122,8 +121,8 @@ public class BindingActivity extends BaseCompatActivity {
         queries.put("app_version", EquipmentInformationUtil.getVersionName(BindingActivity.this));
         queries.put("os_version", EquipmentInformationUtil.getDeviceInformation(EquipmentInformationUtil.RELEASE));
         queries.put("os", "android");
-        queries.put("apptype", "visitor");
-        queries.put("subtype", "front_desk");
+        queries.put("apptype", "office");
+        queries.put("subtype", "office_display");
         queries.put("screen_size", EquipmentInformationUtil.getScreenSize(this));
         Call<ToKenModel> createSessionCall = kuBanHttpClient.getKubanApi().postRegister(queries);
         createSessionCall.enqueue(new Callback<ToKenModel>() {
@@ -143,7 +142,6 @@ public class BindingActivity extends BaseCompatActivity {
             @Override
             public void onFailure(Call<ToKenModel> call, Throwable t) {
                 ErrorUtil.handleError(BindingActivity.this, t);
-                Log.e("===================   ", "   " + t);
             }
         });
     }
@@ -156,7 +154,7 @@ public class BindingActivity extends BaseCompatActivity {
                 dismissProgressDialog();
                 if (response.isSuccessful()) {
                     padsModel = response.body();
-                    if (null != padsModel) {
+                    if (null != padsModel && null != padsModel.meeting_screen) {
                         initButton();
                         CustomerApplication.spaceId = String.valueOf(padsModel.space_id);
                         if (!TextUtils.isEmpty(padsModel.passcode)) {

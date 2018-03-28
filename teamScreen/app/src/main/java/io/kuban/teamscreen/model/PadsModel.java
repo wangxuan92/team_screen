@@ -23,6 +23,8 @@ public class PadsModel extends BaseModel {
      */
 
     public String device_id;
+    public String name;
+    public String area_id;
     public String app_version;
     public String os;
     public String os_version;
@@ -32,6 +34,7 @@ public class PadsModel extends BaseModel {
     public String screen_size;
     public String passcode;
     public int location_id;
+    public MeetingScreenModel meeting_screen;
     public int space_id;
     public String info;
     public LocationModel location;

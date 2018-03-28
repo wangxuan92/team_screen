@@ -32,7 +32,8 @@ android {
         }
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            buildConfigField "String", "BASE_URL", "\"https://ent-devapi.kuban.io/api/v1/\""
+//            buildConfigField "String", "BASE_URL", "\"https://ent-devapi.kuban.io/api/v1/\""
+            buildConfigField "String", "BASE_URL", "\"https://api.v2.kuban.io/api/v2/\""
             buildConfigField "String", "ASSET_BASE_URL", "\"https://media-dev-ssl.kuban.io/\""
             buildConfigField "String", "DOOR_LOCK_KEY", "\"08981fe1177f170e68667c1d3527848f\""
             buildConfigField "String", "DOOR_LOCK_IV", "\"9314059931eedf0e\""

@@ -10,14 +10,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_60"
         android:layout_marginRight="@dimen/dp_44"
-        android:layout_marginTop="@dimen/dp_52">
+        android:layout_marginTop="@dimen/dp_35">
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/text_color_blue_40"
-            android:textSize="@dimen/sp_52"
+            android:textSize="@dimen/sp_42"
             android:textStyle="bold" />
 
         <TextView

@@ -64,7 +64,7 @@ public class DimenTool {
 //
 //                    sw720.append(start).append(num * 2.25).append(end).append("\r\n");
 
-                    sw800.append(start).append(num * 2).append(end).append("\r\n");
+                    sw800.append(start).append(num / 6).append(end).append("\r\n");
 
 //                    w820.append(start).append(num * 2.56).append(end).append("\r\n");
 
@@ -105,7 +105,7 @@ public class DimenTool {
 //
 //            System.out.println(sw720);
 
-            System.out.println("<!--  sw800 -->");
+            System.out.println("<!--  w600 -->");
 
             System.out.println(sw800);
 
@@ -117,7 +117,7 @@ public class DimenTool {
 
             String sw720file = "./app/src/main/res/values-sw720dp/dimens.xml";
 
-            String sw800file = "./app/src/main/res/values-sw800dp/dimens.xml";
+            String sw800file = "./app/src/main/res/values-w600dp/dimens.xml";
 
 //            String w820file = "./app/src/main/res/values-w820dp/dimens.xml";
             //将新的内容，写入到指定的文件中去

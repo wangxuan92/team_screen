@@ -11,6 +11,8 @@
     <string name="invite_code_prompt_2">请输入您的邀请码，邀请码通常是您手机号码的后4位数字</string>
     <string name="confirm">确认</string>
     <string name="empty">清空</string>
+    <string name="no_come">暂无入驻</string>
+
     <string name="dont_have_invite_code">我没有邀请码</string>
     <string name="camera_permission_confirmation">相机权限确认</string>
     <string name="camera_permission_not_granted">没有开启相机权限</string>
