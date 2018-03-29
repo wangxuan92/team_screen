@@ -64,7 +64,7 @@ public class DimenTool {
 //
 //                    sw720.append(start).append(num * 2.25).append(end).append("\r\n");
 
-                    sw800.append(start).append(num / 6).append(end).append("\r\n");
+                    sw800.append(start).append(num / 1.65).append(end).append("\r\n");
 
 //                    w820.append(start).append(num * 2.56).append(end).append("\r\n");
 

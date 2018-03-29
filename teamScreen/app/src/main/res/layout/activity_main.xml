@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/img_pic_bac"
     android:paddingBottom="@dimen/dp_50"
-    android:paddingLeft="@dimen/dp_100"
-    android:paddingRight="@dimen/dp_100"
+    android:paddingLeft="@dimen/dp_80"
+    android:paddingRight="@dimen/dp_80"
     android:paddingTop="@dimen/dp_55">
 
     <RelativeLayout

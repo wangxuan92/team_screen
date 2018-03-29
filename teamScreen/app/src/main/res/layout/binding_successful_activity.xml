@@ -14,10 +14,9 @@
         android:layout_below="@+id/relative"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_30"
-        android:background="@drawable/img_pic_back"
+        android:background="@drawable/bg_btn_rounded_black_border"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/dp_23"
-        android:paddingRight="@dimen/dp_23">
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,7 +26,7 @@
                 android:id="@+id/animation_view_click"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/but_background_green" />
+                android:background="@drawable/bg_but_background_green" />
 
 
         </RelativeLayout>
@@ -112,39 +111,44 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.dariopellegrini.formbuilder.FineTextView
-        android:id="@+id/open_visitors_system"
-        android:layout_width="@dimen/dp_272"
-        android:layout_height="@dimen/dp_70"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/line1"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/dp_12"
-        android:layout_marginTop="@dimen/dp_40"
-        android:background="@drawable/bg_btn_selector"
-        android:gravity="center"
-        android:text="@string/open_visitors_system"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_20" />
-
-    <LinearLayout
-        android:id="@+id/again_match"
-        android:layout_width="@dimen/dp_272"
-        android:layout_height="@dimen/dp_70"
-        android:layout_below="@+id/open_visitors_system"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_22"
-        android:background="@drawable/bg_btn_border_selector"
-        android:gravity="center"
-        android:orientation="horizontal"
-       >
+        android:layout_marginTop="@dimen/dp_40">
 
         <com.dariopellegrini.formbuilder.FineTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_12"
-            android:text="@string/again_match"
-            android:textColor="@color/button_text_pressed_white_selector"
+            android:id="@+id/open_visitors_system"
+            android:layout_width="@dimen/dp_272"
+            android:layout_height="@dimen/dp_70"
+            android:background="@drawable/bg_btn_selector"
+            android:gravity="center"
+            android:text="@string/open_visitors_system"
+            android:textColor="@color/white"
             android:textSize="@dimen/sp_20" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/again_match"
+            android:layout_width="@dimen/dp_272"
+            android:layout_height="@dimen/dp_70"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_toRightOf="@+id/open_visitors_system"
+            android:background="@drawable/bg_btn_border_selector"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.dariopellegrini.formbuilder.FineTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:text="@string/again_match"
+                android:textColor="@color/button_text_pressed_white_selector"
+                android:textSize="@dimen/sp_20" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
 </RelativeLayout>
