@@ -12,6 +12,7 @@
     <string name="confirm">确认</string>
     <string name="empty">清空</string>
     <string name="no_come">暂无入驻</string>
+    <string name="sweep_code">扫码开门</string>
 
     <string name="dont_have_invite_code">我没有邀请码</string>
     <string name="camera_permission_confirmation">相机权限确认</string>

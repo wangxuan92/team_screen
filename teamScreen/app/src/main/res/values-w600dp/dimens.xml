@@ -82,6 +82,7 @@
     <dimen name="dp_293">177.5757575757576dp</dimen>
     <dimen name="dp_300">181.81818181818184dp</dimen>
     <dimen name="dp_305">184.84848484848487dp</dimen>
+    <dimen name="dp_330">200.0dp</dimen>
     <dimen name="dp_348">210.9090909090909dp</dimen>
     <dimen name="dp_350">212.12121212121212dp</dimen>
     <dimen name="dp_380">230.3030303030303dp</dimen>
@@ -104,6 +105,7 @@
     <dimen name="dp_664">402.42424242424244dp</dimen>
     <dimen name="sp_8">4.848484848484849sp</dimen>
     <dimen name="sp_10">6.0606060606060606sp</dimen>
+    <dimen name="sp_12">7.272727272727273sp</dimen>
     <dimen name="sp_14">8.484848484848484sp</dimen>
     <dimen name="sp_16">9.696969696969697sp</dimen>
     <dimen name="sp_17">10.303030303030303sp</dimen>
@@ -123,6 +125,8 @@
     <dimen name="sp_78">47.27272727272727sp</dimen>
     <dimen name="sp_80">48.484848484848484sp</dimen>
     <dimen name="sp_100">60.60606060606061sp</dimen>
+    <dimen name="qr_code_width">109.0909090909091dp</dimen>
+    <dimen name="qr_code_height">118.7878787878788dp</dimen>
     <!--键盘字体大小-->    <dimen name="keyboard_text_size">38.78787878787879sp</dimen>
     <dimen name="keyboard_text_size_1">19.393939393939394sp</dimen>
     <dimen name="keyboard_margin_bottom_10">6.0606060606060606dp</dimen>

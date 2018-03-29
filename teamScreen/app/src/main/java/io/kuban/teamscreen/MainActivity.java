@@ -4,16 +4,19 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +31,7 @@ import io.kuban.teamscreen.service.AlwaysOnService.Bootstrap;
 import io.kuban.teamscreen.utils.AESCipher;
 import io.kuban.teamscreen.utils.ClickUtils;
 import io.kuban.teamscreen.utils.NetUtil;
+import io.kuban.teamscreen.utils.ScreenUtil;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -43,7 +47,10 @@ public class MainActivity extends BaseCompatActivity {
     TextView teamName;
     @BindView(R.id.team_logo)
     ImageView teamLogo;
-
+    @BindView(R.id.qr_code)
+    ImageView qrCode;
+    @BindView(R.id.rl_qr_code)
+    RelativeLayout rlQrCode;
     private CustomDialog dialog;
     private PadsModel padsModel;
     private AreasModel areasModel;
@@ -115,6 +122,16 @@ public class MainActivity extends BaseCompatActivity {
             }
             if (null != areasModel) {
                 areaName.setText(areasModel.name);
+//                if (null != mrQrCode && null != meetingRoomModel && !TextUtils.isEmpty(meetingRoomModel.reservation_url)) {
+//                  //生成二维码
+                rlQrCode.setVisibility(View.VISIBLE);
+                Bitmap qrCodeBitmap = CodeUtils.createImage("https://www.baidu.com/", ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_width)), ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_height)), null);
+                qrCode.setImageBitmap(qrCodeBitmap);
+//                }else{
+//                rlQrCode.setVisibility(View.GONE);
+//            }
+
+
             } else {
                 areaName.setText(padsModel.name);
             }
@@ -174,8 +191,13 @@ public class MainActivity extends BaseCompatActivity {
                         getAreas(padsModel.area_id);
                     } else {
                         ActivityManager.startInActivity(activity);
+                        cache.remove(ActivityManager.PADS_MODEL);
                         finish();
                     }
+                } else {
+                    ActivityManager.startInActivity(activity);
+                    cache.remove(ActivityManager.PADS_MODEL);
+                    finish();
                 }
             }
 
@@ -222,6 +244,7 @@ public class MainActivity extends BaseCompatActivity {
             super.run();
 
         }
+
     }
 
     @Override

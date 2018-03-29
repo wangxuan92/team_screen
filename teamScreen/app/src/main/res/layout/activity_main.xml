@@ -65,8 +65,8 @@
 
         <ImageView
             android:id="@+id/team_logo"
-            android:layout_width="@dimen/dp_132"
-            android:layout_height="@dimen/dp_132"
+            android:layout_width="@dimen/dp_125"
+            android:layout_height="@dimen/dp_125"
             android:layout_centerHorizontal="true"
             android:src="@drawable/img_icon_wuren" />
 
@@ -88,4 +88,63 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/img_icon_kubanshichi" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_qr_code"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_260"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white_transparent_80"
+        android:padding="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/sweep_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_24" />
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rr_qr_code"-->
+    <!--android:layout_width="@dimen/dp_140"-->
+    <!--android:layout_height="@dimen/dp_167"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginLeft="@dimen/dp_10"-->
+    <!--android:layout_marginRight="@dimen/dp_10"-->
+    <!--android:background="@color/white_transparent_80"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:paddingLeft="@dimen/dp_10"-->
+    <!--android:paddingRight="@dimen/dp_10"-->
+    <!--android:paddingTop="@dimen/dp_10">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_below="@+id/qr_code"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="@dimen/dp_10"-->
+    <!--android:layout_marginTop="@dimen/dp_10"-->
+    <!--android:text="@string/sweep_code"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/sp_12" />-->
+
+    <!--</RelativeLayout>-->
 </RelativeLayout>

@@ -1,5 +1,4 @@
-<resources>    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">13.333333333333334dp</dimen>
+<resources>    <!-- Default screen margins, per the Android Design guidelines. -->    <dimen name="activity_horizontal_margin">13.333333333333334dp</dimen>
     <dimen name="activity_vertical_margin">13.333333333333334dp</dimen>
     <dimen name="dp_4">3.3333333333333335dp</dimen>
     <dimen name="dp_5">4.166666666666667dp</dimen>
@@ -83,6 +82,7 @@
     <dimen name="dp_293">244.16666666666669dp</dimen>
     <dimen name="dp_300">250.0dp</dimen>
     <dimen name="dp_305">254.16666666666669dp</dimen>
+    <dimen name="dp_330">275.0dp</dimen>
     <dimen name="dp_348">290.0dp</dimen>
     <dimen name="dp_350">291.6666666666667dp</dimen>
     <dimen name="dp_380">316.6666666666667dp</dimen>
@@ -105,6 +105,7 @@
     <dimen name="dp_664">553.3333333333334dp</dimen>
     <dimen name="sp_8">6.666666666666667sp</dimen>
     <dimen name="sp_10">8.333333333333334sp</dimen>
+    <dimen name="sp_12">10.0sp</dimen>
     <dimen name="sp_14">11.666666666666668sp</dimen>
     <dimen name="sp_16">13.333333333333334sp</dimen>
     <dimen name="sp_17">14.166666666666668sp</dimen>
@@ -124,8 +125,9 @@
     <dimen name="sp_78">65.0sp</dimen>
     <dimen name="sp_80">66.66666666666667sp</dimen>
     <dimen name="sp_100">83.33333333333334sp</dimen>
-    <!--键盘字体大小-->
-    <dimen name="keyboard_text_size">53.333333333333336sp</dimen>
+    <dimen name="qr_code_width">150.0dp</dimen>
+    <dimen name="qr_code_height">163.33333333333334dp</dimen>
+    <!--键盘字体大小-->    <dimen name="keyboard_text_size">53.333333333333336sp</dimen>
     <dimen name="keyboard_text_size_1">26.666666666666668sp</dimen>
     <dimen name="keyboard_margin_bottom_10">8.333333333333334dp</dimen>
     <dimen name="keyboard_margin_left">16.666666666666668dp</dimen>

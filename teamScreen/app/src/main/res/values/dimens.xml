@@ -86,6 +86,7 @@
     <dimen name="dp_293">293dp</dimen>
     <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_305">305dp</dimen>
+    <dimen name="dp_330">330dp</dimen>
     <dimen name="dp_348">348dp</dimen>
     <dimen name="dp_350">350dp</dimen>
     <dimen name="dp_380">380dp</dimen>
@@ -110,6 +111,7 @@
 
     <dimen name="sp_8">8sp</dimen>
     <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
     <dimen name="sp_14">14sp</dimen>
     <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_17">17sp</dimen>
@@ -130,6 +132,8 @@
     <dimen name="sp_80">80sp</dimen>
     <dimen name="sp_100">100sp</dimen>
 
+    <dimen name="qr_code_width">180dp</dimen>
+    <dimen name="qr_code_height">196dp</dimen>
     <!--键盘字体大小-->
     <dimen name="keyboard_text_size">64sp</dimen>
     <dimen name="keyboard_text_size_1">32sp</dimen>

@@ -93,6 +93,7 @@ dependencies {
     compile 'com.guo.android_extend:android-extend:1.0.1'
     compile 'com.airbnb.android:lottie:2.2.0'
     compile 'com.yanzhenjie:permission:1.0.4'
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
     compile 'io.leao:codecolors-appcompat:0.3.0'
     compile 'com.elvishew:xlog:1.4.0'
     compile project(':androidanimations')
