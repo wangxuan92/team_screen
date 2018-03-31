@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Environment;
 import android.os.PowerManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.dariopellegrini.formbuilder.MApplication;
 import com.elvishew.xlog.LogConfiguration;
@@ -69,6 +70,7 @@ public class CustomerApplication extends MyApplication {
 
             @Override
             public void onCodeColorsFailed(Exception e) {
+                Log.e("=================", "     " + e);
                 // Log exceptions in your tracker.
             }
         });

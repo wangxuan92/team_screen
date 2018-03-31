@@ -17,18 +17,37 @@ android {
             jniLibs.srcDirs = ['libs']
         }
         buildConfigField "boolean", "LOG_DEBUG", "false"
-        buildConfigField "String", "BASE_URL", "\"https://ent-devapi.kuban.io/api/v1/\""
+        buildConfigField "String", "BASE_URL", "\"https://api.v2.kuban.io/api/v2/\""
         buildConfigField "String", "ASSET_BASE_URL", "\"https://media-ssl.kuban.io/\""
-        buildConfigField "String", "DOOR_LOCK_KEY", "\"82fc1839159ae08f78af9b36422a8068\""
-        buildConfigField "String", "DOOR_LOCK_IV", "\"75fc3d3b2f4fe835\""
+        buildConfigField "String", "DOOR_LOCK_KEY", "\"08981fe1177f170e68667c1d3527848f\""
+        buildConfigField "String", "DOOR_LOCK_IV", "\"9314059931eedf0e\""
     }
+
+    //签名文件
+    signingConfigs {
+        release {
+            keyAlias 'kuban'
+            keyPassword 'kuban123456'
+            storeFile file('../teamscreen.jks')
+            storePassword 'kuban123456'
+        }
+        debug {
+            keyAlias 'kuban'
+            keyPassword 'kuban123456'
+            storeFile file('../teamscreen.jks')
+            storePassword 'kuban123456'
+        }
+    }
+
     buildTypes {
         release {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
             zipAlignEnabled true
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//            signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
         }
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -41,25 +60,20 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug
         }
     }
 
-//    //签名文件
-//    signingConfigs {
-//        release {
-//            keyAlias 'kuban'
-//            keyPassword 'kuban123456'
-//            storeFile file('../kuban.jks')
-//            storePassword 'kuban123456'
-//        }
-//        debug {
-//            keyAlias 'kuban'
-//            keyPassword 'kuban123456'
-//            storeFile file('../kuban.jks')
-//            storePassword 'kuban123456'
-//        }
-//    }
+    //多渠道打包
+    productFlavors {
+
+        YINGYONGBAO {}
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
 }
 greendao {
     schemaVersion 1

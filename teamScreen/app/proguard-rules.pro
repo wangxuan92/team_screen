@@ -77,6 +77,16 @@
     <init>(Java.lang.Throwable);
 }
 
+### greenDAO 3
+-keepclassmembers class * extends org.greenrobot.greendao.AbstractDao {
+public static java.lang.String TABLENAME;
+}
+-keep class **$Properties
+
+# If you do not use SQLCipher:
+-dontwarn org.greenrobot.greendao.database.**
+# If you do not use RxJava:
+-dontwarn rx.**
 
 
 ## ----------------------------------
@@ -96,7 +106,9 @@
 -keep class com.google.**
 -dontwarn com.google.**
 
--keep class io.kuban.meetingdisplay.model.** { *; }
+-keep class io.kuban.teamscreen.model.** { *; }
+-keep class io.leao.** { *; }
+-keep class io.leao.codecolors.** { *; }
 -keep class com.sunbird.base.** { *;}
 -keep class sun.bob.mcalendarview.** { *;}
 -keep class io.vov.vitamio.** { *;}
