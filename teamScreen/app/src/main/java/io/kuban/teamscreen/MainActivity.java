@@ -73,6 +73,8 @@ public class MainActivity extends BaseCompatActivity {
         filter.addAction(Intent.ACTION_TIME_TICK);
 //        registerReceiver(receiver, filter);
         teamName.setText(CustomerApplication.getStringResources(R.string.no_come));
+        teamLogo.setVisibility(View.GONE);
+        rlQrCode.setVisibility(View.GONE);
         Glide.with(CustomerApplication.getContext())
                 .load(R.drawable.img_icon_wuren).into(teamLogo);
         Log.e("===============   ", "  " + NetUtil.startPing("10.0.109.213"));
@@ -131,19 +133,23 @@ public class MainActivity extends BaseCompatActivity {
                     rlQrCode.setVisibility(View.GONE);
                 }
             } else {
+                rlQrCode.setVisibility(View.GONE);
                 areaName.setText(padsModel.name);
             }
             if (null != areasModel && null != areasModel.organizations && areasModel.organizations.size() > 0) {
                 OrganizationsModel organizationsModel = areasModel.organizations.get(0);
                 teamName.setText(organizationsModel.name);
                 if (!TextUtils.isEmpty(organizationsModel.logo)) {
+                    teamLogo.setVisibility(View.VISIBLE);
                     Glide.with(CustomerApplication.getContext())
                             .load(organizationsModel.logo).error(R.drawable.img_icon_wuren).into(teamLogo);
                 } else {
+                    teamLogo.setVisibility(View.GONE);
                     Glide.with(CustomerApplication.getContext())
                             .load(R.drawable.img_icon_wuren).into(teamLogo);
                 }
             } else {
+                teamLogo.setVisibility(View.GONE);
                 teamName.setText(CustomerApplication.getStringResources(R.string.no_come));
                 Glide.with(CustomerApplication.getContext())
                         .load(R.drawable.img_icon_wuren).into(teamLogo);

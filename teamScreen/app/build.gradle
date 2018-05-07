@@ -44,7 +44,7 @@ android {
             // 显示Log
             buildConfigField "boolean", "LOG_DEBUG", "true"
             zipAlignEnabled true
-            minifyEnabled false
+            minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
