@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
+    <!--android:screenOrientation="landscape"-->
     <application
         android:name=".CustomerApplication"
         android:allowBackup="true"
@@ -31,7 +31,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.BindingActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,11 +40,9 @@
         </activity>
         <activity
             android:name=".activity.BindingSuccessfulActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/translucent" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/translucent" />
 
         <receiver android:name=".receiver.NetBroadcastReceiver">
