@@ -43,7 +43,7 @@
             android:theme="@style/translucent" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/translucent" />
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <receiver android:name=".receiver.NetBroadcastReceiver">
             <intent-filter>
