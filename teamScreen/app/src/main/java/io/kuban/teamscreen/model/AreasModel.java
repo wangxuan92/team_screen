@@ -21,6 +21,7 @@ public class AreasModel {
     public int id;
     public String name;
     public Object map_id;
+    public List<String> lock_qrcode_urls;
     public String area_type;
     public Object image;
     public List<OrganizationsModel> organizations;

@@ -122,16 +122,14 @@ public class MainActivity extends BaseCompatActivity {
             }
             if (null != areasModel) {
                 areaName.setText(areasModel.name);
-//                if (null != mrQrCode && null != meetingRoomModel && !TextUtils.isEmpty(meetingRoomModel.reservation_url)) {
+                if (null != areasModel.lock_qrcode_urls && 0 < areasModel.lock_qrcode_urls.size() && !TextUtils.isEmpty(areasModel.lock_qrcode_urls.get(0))) {
 //                  //生成二维码
-                rlQrCode.setVisibility(View.VISIBLE);
-                Bitmap qrCodeBitmap = CodeUtils.createImage("https://www.baidu.com/", ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_width)), ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_height)), null);
-                qrCode.setImageBitmap(qrCodeBitmap);
-//                }else{
-//                rlQrCode.setVisibility(View.GONE);
-//            }
-
-
+                    rlQrCode.setVisibility(View.VISIBLE);
+                    Bitmap qrCodeBitmap = CodeUtils.createImage(areasModel.lock_qrcode_urls.get(0), ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_width)), ScreenUtil.dip2px(getResources().getDimension(R.dimen.qr_code_height)), null);
+                    qrCode.setImageBitmap(qrCodeBitmap);
+                } else {
+                    rlQrCode.setVisibility(View.GONE);
+                }
             } else {
                 areaName.setText(padsModel.name);
             }
