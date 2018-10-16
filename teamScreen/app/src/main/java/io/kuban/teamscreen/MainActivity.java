@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.kuban.teamscreen.base.BaseCompatActivity;
 import io.kuban.teamscreen.dialog.CustomDialog;
+import io.kuban.teamscreen.dialog.InputNameDialog;
 import io.kuban.teamscreen.manager.ActivityManager;
 import io.kuban.teamscreen.model.AreasModel;
 import io.kuban.teamscreen.model.OrganizationsModel;
@@ -51,7 +52,7 @@ public class MainActivity extends BaseCompatActivity {
     ImageView qrCode;
     @BindView(R.id.rl_qr_code)
     RelativeLayout rlQrCode;
-    private CustomDialog dialog;
+    private InputNameDialog dialog;
     private PadsModel padsModel;
     private AreasModel areasModel;
     private int TIME = 3600 * 1000;  //每隔1小时执行一次.
@@ -87,24 +88,24 @@ public class MainActivity extends BaseCompatActivity {
             case R.id.logo:
                 new HideClick().start();
                 if (HideClick.sIsAlive >= 5) {
-                    dialog = new CustomDialog(MainActivity.this);
+                    dialog = new InputNameDialog(MainActivity.this);
                     dialog.setOnNegativeListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             dialog.remove();
-                            Log.e(TAG, "退出密码  " + CustomerApplication.appPassword + "   ==" + dialog.getPassword() + "==");
-                            if (CustomerApplication.appPassword.equals(dialog.getPassword())) {
-                                Bootstrap.stopAlwaysOnService(MainActivity.this);
-                                AtyContainer.getInstance().finishAllActivity();
-                                new Handler().postDelayed(new Runnable() {
-                                    public void run() {
-                                        android.os.Process.killProcess(android.os.Process.myPid());
-                                        System.exit(0);//正常退出App
-                                    }
-                                }, 500);
-                            } else {
-                                Toast.makeText(MainActivity.this, CustomerApplication.getStringResources(R.string.password_mistake), Toast.LENGTH_SHORT).show();
-                            }
+//                            Log.e(TAG, "退出密码  " + CustomerApplication.appPassword + "   ==" + dialog.getPassword() + "==");
+//                            if (CustomerApplication.appPassword.equals(dialog.getPassword())) {
+                            Bootstrap.stopAlwaysOnService(MainActivity.this);
+                            AtyContainer.getInstance().finishAllActivity();
+                            new Handler().postDelayed(new Runnable() {
+                                public void run() {
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(0);//正常退出App
+                                }
+                            }, 500);
+//                            } else {
+//                                Toast.makeText(MainActivity.this, CustomerApplication.getStringResources(R.string.password_mistake), Toast.LENGTH_SHORT).show();
+//                            }
                         }
                     });
                     if (ClickUtils.isFastClick()) {

@@ -85,6 +85,6 @@
     <string name="exit">退出</string>
     <string name="exit_hint">输入密码进行</string>
     <string name="reason">访问事由：</string>
-
+    <string name="quit_application">是否退出应用</string>
 
 </resources>
